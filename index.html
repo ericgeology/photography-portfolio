@@ -1,114 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Landscape, travel, street and portrait photography by Xingxing Gao.">
-  <title>Xingxing Gao — Photography</title>
-  <link rel="stylesheet" href="app/globals.css">
-</head>
-<body>
-  <header class="mobile-header">
-    <a class="mark" href="#projects" aria-label="Xingxing Gao Photography">XG<span>°</span></a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
-  </header>
-
-  <aside class="sidebar" aria-label="Site navigation">
-    <a class="mark" href="#projects">XG<span>°</span></a>
-    <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="project-nav">
-      <p>Projects</p>
-      <button class="active" data-filter="All">Selected</button>
-      <button data-filter="Landscape">Landscape</button>
-      <button data-filter="Travel">Travel</button>
-      <button data-filter="Street">Street</button>
-      <button data-filter="Portrait">Portrait</button>
-      <button data-filter="Story">Stories</button>
-    </div>
-    <div class="sidebar-foot">
-      <a href="#">Instagram</a>
-      <a href="#">Unsplash</a>
-      <span>© 2026</span>
-    </div>
-  </aside>
-
-  <main class="content">
-    <section id="projects" class="projects" aria-label="Photography projects">
-      <article class="project-card" data-category="Story">
-        <a class="image-wrap" href="#taizijian"><img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1400&q=90" alt="A misty mountain ridge"><span class="number">01</span></a>
-        <div class="card-info"><h2>Into the Mist</h2><p>Taizijian · 2025</p></div>
-      </article>
-      <article class="project-card" data-category="Landscape">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=1400&q=88" alt="Blue mountain lake"><span class="number">02</span></div>
-        <div class="card-info"><h2>Quiet Current</h2><p>Landscape · Sichuan</p></div>
-      </article>
-      <article class="project-card" data-category="Travel">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1400&q=88" alt="A quiet Japanese street"><span class="number">03</span></div>
-        <div class="card-info"><h2>Last Train</h2><p>Travel · Kyoto</p></div>
-      </article>
-      <article class="project-card" data-category="Street">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=88" alt="City streets from above"><span class="number">04</span></div>
-        <div class="card-info"><h2>After Rain</h2><p>Street · Shanghai</p></div>
-      </article>
-      <article class="project-card" data-category="Portrait">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1400&q=88" alt="A quiet portrait"><span class="number">05</span></div>
-        <div class="card-info"><h2>Between Words</h2><p>Portrait · Hangzhou</p></div>
-      </article>
-      <article class="project-card" data-category="Travel">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=88" alt="Tropical landscape seen through a window"><span class="number">06</span></div>
-        <div class="card-info"><h2>Summer Window</h2><p>Travel · Dali</p></div>
-      </article>
-      <article class="project-card" data-category="Landscape">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=88" alt="A path through a foggy forest"><span class="number">07</span></div>
-        <div class="card-info"><h2>Soft Distance</h2><p>Landscape · Zhejiang</p></div>
-      </article>
-      <article class="project-card" data-category="Street">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1400&q=88" alt="Street traffic at dusk"><span class="number">08</span></div>
-        <div class="card-info"><h2>City Rhythm</h2><p>Street · Tokyo</p></div>
-      </article>
-      <article class="project-card" data-category="Portrait">
-        <div class="image-wrap"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=88" alt="Portrait in soft daylight"><span class="number">09</span></div>
-        <div class="card-info"><h2>Sunday Light</h2><p>Portrait · Studio</p></div>
-      </article>
-    </section>
-
-    <section id="taizijian" class="feature">
-      <p class="kicker">Story 01 · Taizijian</p>
-      <h1>Into the mist,<br>without a map.</h1>
-      <p>Before sunrise, the mountain disappeared into cloud. We kept climbing—not toward a view, but into a landscape reduced to breath, stone and silence.</p>
-      <a href="#projects">View the series <span>↗</span></a>
-    </section>
-
-    <section id="about" class="info-section">
-      <p class="section-label">About</p>
-      <div><h2>Observing the quiet<br>between moments.</h2><p>I’m Xingxing, an independent photographer drawn to mountain weather, unfamiliar streets and honest human moments. This is a growing visual notebook of places and feelings.</p></div>
-    </section>
-
-    <footer id="contact">
-      <p class="section-label">Contact</p>
-      <div><h2>Let’s make something<br>worth remembering.</h2><a class="mail" href="mailto:hello@example.com">hello@example.com ↗</a></div>
-    </footer>
-  </main>
-
-  <script>
-    const sidebar = document.querySelector('.sidebar');
-    const menu = document.querySelector('.menu-toggle');
-    menu.addEventListener('click', () => {
-      const open = sidebar.classList.toggle('open');
-      menu.setAttribute('aria-expanded', String(open));
-    });
-    sidebar.querySelectorAll('a').forEach(link => link.addEventListener('click', () => sidebar.classList.remove('open')));
-    document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      document.querySelectorAll('[data-filter]').forEach(item => item.classList.remove('active'));
-      button.classList.add('active');
-      document.querySelectorAll('.project-card').forEach(card => card.hidden = filter !== 'All' && card.dataset.category !== filter);
-      sidebar.classList.remove('open');
-      menu.setAttribute('aria-expanded', 'false');
-    }));
-  </script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Xingxing Gao — Photography</title><meta name="description" content="Photography portfolio by Xingxing Gao"><link rel="stylesheet" href="app/globals.css"></head><body>
+<header class="mobile-header"><a class="mark" href="#projects">XG<span>°</span></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button></header>
+<aside class="sidebar"><a class="mark" href="#projects">XG<span>°</span></a><nav><a href="#about">About</a><a href="#contact">Contact</a></nav><div class="filters"><b>Projects</b><button class="active" data-filter="All">Selected</button><button data-filter="Landscape">Landscape</button><button data-filter="Travel">Travel</button><button data-filter="Street">Street</button><button data-filter="Portrait">Portrait</button><button data-filter="Story">Stories</button></div><div class="social"><a href="#">Instagram</a><a href="#">Unsplash</a><span>© 2026</span></div></aside>
+<main>
+<section id="projects" class="grid">
+<article data-category="Story"><a href="#story" class="image"><img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1400&q=88" alt="Misty mountain ridge"><em>01</em></a><div><h2>Into the Mist</h2><p>Taizijian · 2025</p></div></article>
+<article data-category="Landscape"><span class="image"><img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=1400&q=88" alt="Mountain lake"><em>02</em></span><div><h2>Quiet Current</h2><p>Landscape · Sichuan</p></div></article>
+<article data-category="Travel"><span class="image"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1400&q=88" alt="Japanese street"><em>03</em></span><div><h2>Last Train</h2><p>Travel · Kyoto</p></div></article>
+<article data-category="Street"><span class="image"><img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=88" alt="City streets"><em>04</em></span><div><h2>After Rain</h2><p>Street · Shanghai</p></div></article>
+<article data-category="Portrait"><span class="image"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1400&q=88" alt="Portrait"><em>05</em></span><div><h2>Between Words</h2><p>Portrait · Hangzhou</p></div></article>
+<article data-category="Travel"><span class="image"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=88" alt="Tropical landscape"><em>06</em></span><div><h2>Summer Window</h2><p>Travel · Dali</p></div></article>
+<article data-category="Landscape"><span class="image"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=88" alt="Foggy forest"><em>07</em></span><div><h2>Soft Distance</h2><p>Landscape · Zhejiang</p></div></article>
+<article data-category="Street"><span class="image"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1400&q=88" alt="Street at dusk"><em>08</em></span><div><h2>City Rhythm</h2><p>Street · Tokyo</p></div></article>
+<article data-category="Portrait"><span class="image"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=88" alt="Portrait in daylight"><em>09</em></span><div><h2>Sunday Light</h2><p>Portrait · Studio</p></div></article>
+</section>
+<section id="story" class="story"><small>Story 01 · Taizijian</small><h1>Into the mist,<br>without a map.</h1><p>Before sunrise, the mountain disappeared into cloud. We kept climbing—not toward a view, but into a landscape reduced to breath, stone and silence.</p><a href="#projects">View the series ↗</a></section>
+<section id="about" class="info"><small>About</small><div><h2>Observing the quiet<br>between moments.</h2><p>I’m Xingxing, an independent photographer drawn to mountain weather, unfamiliar streets and honest human moments. This is a growing visual notebook of places and feelings.</p></div></section>
+<footer id="contact" class="info"><small>Contact</small><div><h2>Let’s make something<br>worth remembering.</h2><a href="mailto:hello@example.com">hello@example.com ↗</a></div></footer>
+</main><script>const side=document.querySelector('.sidebar'),menu=document.querySelector('.menu-toggle');menu.onclick=()=>{let open=side.classList.toggle('open');menu.setAttribute('aria-expanded',open)};document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.grid article').forEach(c=>c.hidden=b.dataset.filter!=='All'&&c.dataset.category!==b.dataset.filter);side.classList.remove('open')});</script></body></html>
