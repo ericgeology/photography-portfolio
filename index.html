@@ -14,7 +14,22 @@
   <meta name="description" content="Photography projects by Eric — Into the Mist and Salt Lake">
   <title>Eric — Photography</title>
   <link rel="stylesheet" href="app/globals.css">
-  <style>.project[hidden]{display:none}.gallery figure img{max-height:none;background:transparent}</style>
+  <style>
+    .project[hidden],.project-index[hidden]{display:none}
+    .gallery figure img{max-height:none;background:transparent}
+    .project-index{min-height:100svh;padding:40px 32px 120px}
+    .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:58px 20px}
+    .project-card{display:block}
+    .project-card-image{overflow:hidden;background:#ddd}
+    .project-card img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .45s ease}
+    .project-card:hover img{transform:scale(1.015)}
+    .project-card figcaption{display:grid;grid-template-columns:1fr auto;gap:12px;margin-top:10px;padding-top:10px;border-top:1px solid #111}
+    .project-card figure{margin:0}
+    .project-card h2{margin:0;font:400 22px/1.1 Georgia,serif}
+    .project-card p{margin:0;color:#777;font-size:10px;line-height:1.4;text-align:right;text-transform:uppercase;letter-spacing:.1em}
+    @media(max-width:650px){.project-index{padding:20px 14px 90px}.project-grid{grid-template-columns:1fr;gap:48px}.project-card h2{font-size:21px}}
+    @media(prefers-reduced-motion:reduce){.project-card img{transition:none}}
+  </style>
 </head>
 <body>
   <header class="mobile-header"><a class="logo" href="#top">Eric</a><button class="menu-button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></header>
@@ -26,6 +41,23 @@
   </aside>
 
   <main id="top">
+    <section id="photography" class="project-index" aria-label="Photography projects">
+      <div class="project-grid">
+        <a class="project-card" href="#salt-lake" aria-label="View Salt Lake, Qaidam Basin, 2023">
+          <figure>
+            <div class="project-card-image"><img src="images/2023/salt-lake/Salt-lake-1.jpg" alt="A salt lake reflecting a distant mountain range"></div>
+            <figcaption><h2>Salt Lake</h2><p>Qaidam Basin<br>2023</p></figcaption>
+          </figure>
+        </a>
+        <a class="project-card" href="#into-the-mist" aria-label="View Into the Mist, Taizijian, 2026">
+          <figure>
+            <div class="project-card-image"><img src="images/2026/into-the-mist/L1010551%2016.19.39.jpeg" alt="Figures walking through headlights on a foggy night"></div>
+            <figcaption><h2>Into the Mist</h2><p>Taizijian<br>2026</p></figcaption>
+          </figure>
+        </a>
+      </div>
+    </section>
+
     <article class="project" data-project="salt-lake" hidden>
     <section id="salt-lake" class="hero">
       <img src="images/2023/salt-lake/Salt-lake-1.jpg" alt="A salt lake reflecting a distant mountain range">
@@ -49,7 +81,7 @@
     </section>
     </article>
 
-    <article class="project" data-project="into-the-mist">
+    <article class="project" data-project="into-the-mist" hidden>
     <section id="into-the-mist" class="hero project-hero">
       <img src="images/2026/into-the-mist/L1010551%2016.19.39.jpeg" alt="Figures walking through headlights on a foggy night">
       <div class="hero-copy"><p>Taizijian · 2026</p><h1>Into<br>the Mist</h1><span>A photographic journey through mountain fog</span></div>
@@ -80,6 +112,7 @@
   </main>
   <script>
     const menu=document.querySelector('.menu-button'),side=document.querySelector('.sidebar');
+    const projectIndex=document.querySelector('.project-index');
     const projects=[...document.querySelectorAll('[data-project]')];
     const projectLinks=[...document.querySelectorAll('[data-project-link]')];
     const latestProject='into-the-mist';
@@ -87,18 +120,25 @@
 
     function showProject(name,shouldScroll=false){
       currentProject=name;
+      projectIndex.hidden=true;
       projects.forEach(project=>project.hidden=project.dataset.project!==name);
       projectLinks.forEach(link=>link.classList.toggle('active',link.dataset.projectLink===name));
       if(shouldScroll) requestAnimationFrame(()=>document.getElementById(name).scrollIntoView());
+    }
+
+    function showProjectIndex(shouldScroll=false){
+      projectIndex.hidden=false;
+      projects.forEach(project=>project.hidden=true);
+      projectLinks.forEach(link=>link.classList.remove('active'));
+      if(shouldScroll) requestAnimationFrame(()=>projectIndex.scrollIntoView());
     }
 
     function handleHash(){
       const hash=location.hash.slice(1);
       const projectNames=projects.map(project=>project.dataset.project);
       if(projectNames.includes(hash)) showProject(hash,true);
-      else if(hash==='photography') showProject(latestProject,true);
-      else if(!hash) showProject(latestProject,false);
-      else showProject(currentProject,false);
+      else if(hash==='photography') showProjectIndex(true);
+      else if(!hash) showProjectIndex(false);
     }
 
     menu.addEventListener('click',()=>{const open=side.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
