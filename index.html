@@ -27,7 +27,10 @@
     .project-card figure{margin:0}
     .project-card h2{margin:0;font:400 22px/1.1 Georgia,serif}
     .project-card p{margin:0;color:#777;font-size:10px;line-height:1.4;text-align:right;text-transform:uppercase;letter-spacing:.1em}
-    @media(max-width:650px){.project-index{padding:20px 14px 90px}.project-grid{grid-template-columns:1fr;gap:48px}.project-card h2{font-size:21px}}
+    .calm-gallery{display:flex;flex-direction:column;align-items:center;gap:100px;padding-left:clamp(24px,7vw,110px);padding-right:clamp(24px,7vw,110px)}
+    .calm-gallery figure,.calm-gallery figure.wide{width:min(100%,720px);margin:0;grid-column:auto}
+    .calm-gallery figure.landscape{width:min(100%,1000px)}
+    @media(max-width:650px){.project-index{padding:20px 14px 90px}.project-grid{grid-template-columns:1fr;gap:48px}.project-card h2{font-size:21px}.calm-gallery{gap:58px;padding-left:18px;padding-right:18px}}
     @media(prefers-reduced-motion:reduce){.project-card img{transition:none}}
   </style>
 </head>
@@ -99,21 +102,21 @@
       <div><h2>A slow walk<br>beside the sea.</h2><p>At Cottesloe Beach, there is no need to hurry. People walk, sit and watch the water as the afternoon slowly moves toward sunset. This series reflects the quiet comfort of being beside the sea—a place where an ordinary walk can become a moment of stillness.</p></div>
     </section>
 
-    <section class="gallery" aria-label="The Calm Between Waves photography series">
-      <figure class="wide"><img src="images/2025/Cottesloe-Beach/cb-2.jpg" alt="People walking along the shore at Cottesloe Beach"><figcaption><span>01</span><span>By the Sea</span></figcaption></figure>
+    <section class="gallery calm-gallery" aria-label="The Calm Between Waves photography series">
+      <figure class="landscape"><img src="images/2025/Cottesloe-Beach/cb-2.jpg" alt="People walking along the shore at Cottesloe Beach"><figcaption><span>01</span><span>By the Sea</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-6.jpg" alt="A long stretch of beach beneath an open sky"><figcaption><span>02</span><span>The Long Shore</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-19.jpg" alt="An open view across Cottesloe Beach"><figcaption><span>03</span><span>Open Coast</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-8.jpg" alt="Lines left by the tide along the beach"><figcaption><span>04</span><span>Tide Lines</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-9.jpg" alt="A solitary person walking beside the water"><figcaption><span>05</span><span>A Quiet Walk</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-12.jpg" alt="A distant vessel beyond the shore"><figcaption><span>06</span><span>Offshore</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-14.jpg" alt="People making their way toward the water"><figcaption><span>07</span><span>Toward the Water</span></figcaption></figure>
-      <figure class="wide"><img src="images/2025/Cottesloe-Beach/cb-7.jpg" alt="The coast framed from a shaded path"><figcaption><span>08</span><span>Coastal Frame</span></figcaption></figure>
-      <figure class="wide"><img src="images/2025/Cottesloe-Beach/cb-13.jpg" alt="A wooden path leading down toward two figures beside the water"><figcaption><span>09</span><span>Down to the Water</span></figcaption></figure>
+      <figure><img src="images/2025/Cottesloe-Beach/cb-7.jpg" alt="The coast framed from a shaded path"><figcaption><span>08</span><span>Coastal Frame</span></figcaption></figure>
+      <figure><img src="images/2025/Cottesloe-Beach/cb-13.jpg" alt="A wooden path leading down toward two figures beside the water"><figcaption><span>09</span><span>Down to the Water</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-21.jpg" alt="Seabirds crossing the evening sky"><figcaption><span>10</span><span>Evening Flight</span></figcaption></figure>
       <figure><img src="images/2025/Cottesloe-Beach/cb-24.jpg" alt="People resting beside the beach as daylight fades"><figcaption><span>11</span><span>Gathering Dusk</span></figcaption></figure>
-      <figure class="wide"><img src="images/2025/Cottesloe-Beach/cb-25.jpg" alt="Warm light falling across the water near sunset"><figcaption><span>12</span><span>Last Light</span></figcaption></figure>
-      <figure class="wide"><img src="images/2025/Cottesloe-Beach/cb-36.jpg" alt="Ships resting on the horizon at dusk"><figcaption><span>13</span><span>On the Horizon</span></figcaption></figure>
-      <figure class="wide"><img src="images/2025/Cottesloe-Beach/cb-42.jpg" alt="The coast beneath the final colour of sunset"><figcaption><span>14</span><span>Afterglow</span></figcaption></figure>
+      <figure class="landscape"><img src="images/2025/Cottesloe-Beach/cb-25.jpg" alt="Warm light falling across the water near sunset"><figcaption><span>12</span><span>Last Light</span></figcaption></figure>
+      <figure class="landscape"><img src="images/2025/Cottesloe-Beach/cb-36.jpg" alt="Ships resting on the horizon at dusk"><figcaption><span>13</span><span>On the Horizon</span></figcaption></figure>
+      <figure class="landscape"><img src="images/2025/Cottesloe-Beach/cb-42.jpg" alt="The coast beneath the final colour of sunset"><figcaption><span>14</span><span>Afterglow</span></figcaption></figure>
     </section>
     </article>
 
